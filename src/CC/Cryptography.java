@@ -9,7 +9,7 @@ public class Cryptography {
     private Map<Character,Character> keyMap;
 
     public Cryptography() {
-        this.alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.!?";
+        this.alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.!?-";
         this.keyMap = generateEncryptionKey();
     }
 
