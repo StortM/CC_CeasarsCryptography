@@ -6,13 +6,15 @@ import java.util.Random;
 
 public class Cryptography {
     private String alphabet;
+    private Map<Character,Character> keyMap;
 
-    public Cryptography(String alphabet) {
-        this.alphabet = "abcdefghijklmnopqrstuvwxyz";
+    public Cryptography() {
+        this.alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.!?";
+        this.keyMap = generateEncryptionKey();
     }
 
-    public Cryptography(){
-
+    public Map<Character, Character> getKeyMap() {
+        return keyMap;
     }
 
     public String getAlphabet() {
@@ -29,7 +31,7 @@ public class Cryptography {
         Random random = new Random();
         int randomNumber = random.nextInt(charAlphabet.length-1) +1;
 
-        Map<Character,Character> keyMap = new HashMap<>();
+        keyMap = new HashMap<>();
 
         for (int i = 0; i <charAlphabet.length; i++){
             if (i + randomNumber < charAlphabet.length){

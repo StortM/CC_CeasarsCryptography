@@ -1,3 +1,5 @@
+package CC;
+
 import CC.Cryptography;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +14,7 @@ class CryptographyTest {
     Cryptography cryptography = new Cryptography();
 
     @Test
-    void generateEncryptionKey(){
+    void testGenerateEncryptionKey(){
         String var = "abcdefghijklmnopqrstuvwxyz";
         char[] alphabet = var.toCharArray();
         Random random = new Random();
